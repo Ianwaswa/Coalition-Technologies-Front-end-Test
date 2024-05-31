@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <img src="Images/TestLogo.png" alt="Hospital Logo" class="hospital-logo">
+        <nav class="tabs__nav">
+            <a href="#">Overview</a>
+            <a href="#">Patients</a>
+            <a href="#">Schedule</a>
+            <a href="#">Messages</a>
+            <a href="#">Transactions</a>
+            <div class="doctor-info">
+                <img src="Images/senior-woman-doctor-and-portrait-smile-for-health-2023-11-27-05-18-16-utc.png" alt="Doctor Picture">
+                <div>
+                    <span class="doctor-name">Dr. Jose Simmons</span>
+                    <small class="doctor-role">General Practitioner</small>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="main-content">
+        <aside class="patients-list">
+            <input type="text" placeholder="Search patients..." class="search-bar">
+            <ul id="patientsList">
+                <!-- Patients to be dynamically populated here -->
+            </ul>
+        </aside>
+        <section class="diagnosis-history">
+            <h2>Diagnosis History</h2>
+            <canvas id="bloodPressureChart"></canvas>
+            <div class="additional-stats">
+                <div class="stat-item">
+                    <img src="Images/respiratory rate@2x.png" alt="Lungs Icon">
+                    <span id="respiratoryRate">Respiratory Rate: -- bpm</span>
+                </div>
+                <div class="stat-item">
+                    <img src="Images/temperature@2x.png" alt="Thermometer Icon">
+                    <span id="temperature">Temperature: -- °F</span>
+                </div>
+                <div class="stat-item">
+                    <img src="Images/HeartBPM@2x.png" alt="Heart Icon">
+                    <span id="heartRate">Heart Rate: -- bpm</span>
+                </div>
+            </div>
+            <h3>Diagnostic List</h3>
+            <ul id="diagnosisList">
+                <!-- Diagnosis list to be dynamically populated here -->
+            </ul>
+        </section>
+        <section class="patient-details">
+            <img src="Images/Layer 2@2x.png" alt="Jessica Taylor">
+            <h2>Jessica Taylor</h2>
+            <p><strong>Date of Birth:</strong> August 23, 1996</p>
+            <p><strong>Gender:</strong> Female</p>
+            <p><strong>Contact Info:</strong> (415) 555-5678</p>
+            <p><strong>Emergency Contacts:</strong> (415) 555-5678</p>
+            <p><strong>Insurance Provider:</strong> Sunrise Health Assurance</p>
+            <button>Show All Information</button>
+            <h3>Lab Results</h3>
+            <ul class="lab-results">
+                <li>Blood Tests <a href="#" class="download-icon">Download</a></li>
+                <li>CT Scans <a href="#" class="download-icon">Download</a></li>
+                <li>Radiology Reports <a href="#" class="download-icon">Download</a></li>
+                <li>X-Rays <a href="#" class="download-icon">Download</a></li>
+                <li>Urine Test <a href="#" class="download-icon">Download</a></li>
+            </ul>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
